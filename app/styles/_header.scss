@@ -1,0 +1,14 @@
+
+
+
+.logo {
+	width: 120px;
+
+	@include media($medium-screen) {
+		width: 200px;
+	}
+
+	@include media($large-screen) {
+		width: 300px;
+	}
+}
