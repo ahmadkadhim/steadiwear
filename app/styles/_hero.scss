@@ -1,7 +1,7 @@
 
 
 section.hero {
-	background: url('../images/thumbs-up-hand.jpg') 55% 50% no-repeat;
+	background: url('../images/thumbs-up-hand.jpg') 50% 50% no-repeat;
 	background-size: cover;
 
 	@include media($medium-screen-up) {
@@ -18,8 +18,13 @@ section.hero {
 
 }
 
+h1 {
+	margin-bottom: 1rem;
+	line-height: 1;
+}
+
 .cta {
-	@include span-columns(8);
+	@include span-columns(7.25);
 
 	@include media($medium-screen-up) {
 		@include span-columns(4.5); // of 8
@@ -28,7 +33,18 @@ section.hero {
 		@include span-columns(6); // of 12
 	}
 
+
+	.mailing-list {
+		margin-top: 1.5rem;
+
+		@include media($medium-screen-up) {
+			margin-top: 2.5rem;
+		}
+	}
+
 	.sign-up-form {
+
+
 		input, button {
 			display: inline;
 		}
@@ -42,8 +58,4 @@ section.hero {
 			@include omega();
 		}
 	}
-}
-
-h1 {
-	margin-bottom: 1rem;
 }
