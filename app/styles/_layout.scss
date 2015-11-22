@@ -1,0 +1,32 @@
+header, section, footer {
+}
+
+section, footer {
+	padding: 3rem 1.5rem;
+
+	@include media($medium-screen-up) {
+		padding: 3rem;
+	}
+}
+
+
+.container {
+	@include outer-container;
+}
+
+html {
+
+	font-size: 75%;
+
+	@include media($medium-screen-up) {
+		font-size: 100%;
+	}
+}
+
+body.larger-size {
+	font-size: 133%;
+}
+
+body.smaller-size {
+	font-size: 75%;
+}

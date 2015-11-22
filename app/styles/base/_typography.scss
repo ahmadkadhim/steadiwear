@@ -20,21 +20,28 @@ h6 {
 
 h1 {
   font-size: $base-font-size * 3.998;
+  font-weight: 600;
+  color: $green-dark;
 }
 h2 {
   font-size: $base-font-size * 2.827;
+  font-weight: 600;
 }
 h3 {
   font-size: $base-font-size * 1.999;
+  font-weight: 400;
 }
 h4 {
   font-size: $base-font-size * 1.414;
+  font-weight: 400;
 }
 h5 {
   font-size: $base-font-size * 1;
+  font-weight: 400;
 }
 h6 {
   font-size: $base-font-size * .707;
+  font-weight: 400;
 }
 
 p {
@@ -65,4 +72,8 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+strong {
+  font-weight: 600;
 }

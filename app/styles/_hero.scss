@@ -1,0 +1,49 @@
+
+
+section.hero {
+	background: url('../images/thumbs-up-hand.jpg') 55% 50% no-repeat;
+	background-size: cover;
+
+	@include media($medium-screen-up) {
+		background: url('../images/thumbs-up-hand.jpg') 40% 60% no-repeat;
+		background-size: cover;
+	}
+
+	@include media($large-screen-up) {
+		background: url('../images/thumbs-up-hand.jpg') 20% 70% no-repeat;
+		background-size: cover;
+
+		padding: 5rem 3rem;
+	}
+
+}
+
+.cta {
+	@include span-columns(8);
+
+	@include media($medium-screen-up) {
+		@include span-columns(4.5); // of 8
+	}
+	@include media($large-screen-up) {
+		@include span-columns(6); // of 12
+	}
+
+	.sign-up-form {
+		input, button {
+			display: inline;
+		}
+		input {
+			@include span-columns(7);
+			padding: .6em;
+		}
+		button {
+			margin-left: -1rem;
+			@include span-columns(5);
+			@include omega();
+		}
+	}
+}
+
+h1 {
+	margin-bottom: 1rem;
+}

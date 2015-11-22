@@ -1,0 +1,18 @@
+section.survey {
+	background: $white;
+
+	* {
+		text-align: center;
+	}
+
+	button {
+		font-size: $base-font-size * 1.999; // from type scale, matches an h3
+		padding: 1rem 1.5rem;
+		margin-bottom: 2rem;
+
+		@include media($medium-screen-up) {
+			padding: 1rem 4rem;
+		}
+	}
+}
+

@@ -1,14 +1,17 @@
 // bower:scss
 // endbower
 
+@import "bower_components/normalize.css/normalize";
+
 @import "bourbon/bourbon";
 @import "base/base";
 @import "neat/neat";
 
+@import "mixins";
 @import "layout";
 
 @import "header";
 @import "hero";
 @import "product-description";
-@import "cta";
+@import "survey";
 @import "footer";

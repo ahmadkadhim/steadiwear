@@ -18,9 +18,10 @@ $base-z-index: 0;
 // Colors
 $black: #04040F;
 $gray-dark: #2D3A3A;
+$gray-medium-dark: #999E99;
 $gray-medium: #666666;
 $gray-light: #DDDDDD;
-$gray-extra-light: #F8F8F8;
+$gray-extra-light: #F4F4F4;
 $white: #FCFCFF;
 $green-light: #2BA84A;
 $green-dark: #248232;
@@ -44,3 +45,6 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Shadows
+$box-shadow: .25px .5px 3px rgba(0,0,0,.12);

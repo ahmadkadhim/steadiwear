@@ -1,0 +1,21 @@
+
+footer {
+	// padding: 3rem;
+	background: $gray-dark;
+}
+
+.address, .legal {
+	text-align: center;
+	margin: 1rem;
+}
+
+.address > * {
+	color: $white;
+	margin-bottom: .25rem;
+}
+
+.legal > * {
+	color: $gray-medium-dark;
+	display: inline-block;
+	margin: .33rem;
+}

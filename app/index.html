@@ -19,49 +19,83 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     
   </head>
-  <body>
+  <body class="normal-size">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
     <header>
-      <div class="container">
 
-        <div class="text-size-bar">
+      <script type="text/javascript">
+        function increaseTextSize() {
+          var size = document.body.getAttribute('class');
+          console.log(size);
+          if (size === "normal-size") {
+            document.body.classList.remove('normal-size');
+            console.log(document.body.getAttribute('class'));
+            document.body.classList.add('larger-size');
+          } else if (size === "smaller-size") {
+            document.body.classList.remove('smaller-size');
+            document.body.classList.add('normal-size');            
+          }
+        }
+  
+        function decreaseTextSize() {
+          var size = document.body.getAttribute('class');
+
+          if (size === "larger-size") {
+            document.body.classList.remove('larger-size');
+            document.body.classList.add('normal-size');
+          } else if (size === "normal-size") {
+            document.body.classList.remove('normal-size');
+            document.body.classList.add('smaller-size');            
+          }
+        }
+      </script>
+
+      <div class="text-size-bar">
+        <div class="container">
           <div class="text-size-control">
-            <h6 class="text-size">Text Size</h6>
-            <button class="text-size-decrease">-</button>
-            <button class="text-size-increase">+</button>
+            <h5 class="text-size">Text Size</h5>
+            <button class="text-size-decrease" onclick="decreaseTextSize()">&ndash;</button>
+<!--             <div class="text-size-indicator smaller"></div>
+            <div class="text-size-indicator normal"></div>
+            <div class="text-size-indicator larger"></div> -->
+            <button class="text-size-increase" onclick="increaseTextSize()"><strong>+</strong></button>
           </div>
         </div>
-
-        <div class="logo-bar">
-          <img src="images/steadiware-logo.png" alt="Steadiwear Logo" class="logo">
-        </div>
-
       </div>
+
+
+      <div class="logo-bar">
+        <div class="container">
+          <img src="images/steadiwear-logo.png" alt="Steadiwear Logo" class="logo">
+        </div>
+      </div>
+
     </header>
 
 
     <section class="hero">
       <div class="container">
 
-      <div class="cta">
-        
-        <h1>Get back to steady.</h1>
-        
-        <h3>The Steadiglove is a revolutionary new wearable device that intelligently <em>reduces hand tremors</em> for all those who live with Essential Tremor and Parkinson's Disease.</h3>
+        <div class="cta">
+          
+          <h1>Get back to steady.</h1>
+          
+          <h4>The Steadiglove is a revolutionary new wearable device that intelligently <strong>reduces hand tremors</strong> for all those who live with Essential Tremor and Parkinson's Disease.</h4>
 
-        <div class="mailing-list">
-          <h2>Instantly get notified when the Steadiglove is ready</h2>
-          <!-- mailchimp sign up form -->
-          <form action="" class="sign-up-form">
-            <input type="text"><button>Notify Me</button>
-          </form>
-          <!-- /mailchimp sign up form -->
+          <div class="mailing-list">
+            <h4><strong>Instantly get notified when the Steadiglove is ready</strong></h4>
+            <!-- mailchimp sign up form -->
+            <form action="" class="sign-up-form">
+              <input type="text" placeholder="your email">
+              <button>Notify Me</button>
+            </form>
+            <!-- /mailchimp sign up form -->
+          </div>
+
         </div>
-
-      </div>
 
       </div>
     </section>
@@ -71,27 +105,39 @@
       <div class="container">
       
         <div class="feature machine-washable">
-          <div class="machine-wash-graphic"></div>
-          <h3>Machine Washable</h3>
-          <h6>Easy and quick cleaning, for everyday wear.</h6>
+          <div class="feature-image-wrapper">
+            <img src="images/washing-machine.png" alt="" class="washing-machine-graphic">
+          </div>
+          <!-- <div class="washing-machine-graphic"></div> -->
+          <h4 class="feature-title">Machine Washable</h4>
+          <h5 class="feature-description">Easy and quick cleaning, for everyday wear.</h5>
         </div>
         
         <div class="feature no-battery">
-          <div class="no-battery-graphic"></div>
-          <h3>No Battery</h3>
-          <h6>No charging. No hassle. Just wear it and go.</h6>
+          <div class="feature-image-wrapper">
+            <img src="images/battery.png" alt="" class="battery-graphic">
+          </div>
+          <!-- <div class="battery-graphic"></div> -->
+          <h4 class="feature-title">No Battery</h4>
+          <h5 class="feature-description">No charging. No hassle. Just wear it and go.</h5>
         </div>
 
         <div class="feature adaptable">
-          <div class="adaptable-graphic"></div>
-          <h3>Adaptable</h3>
-          <h6>Adapts to any tremor level.</h6>
+          <div class="feature-image-wrapper">
+            <img src="images/active.png" alt="" class="adaptable-graphic">
+          </div>
+          <!-- <div class="adaptable-graphic"></div> -->
+          <h4 class="feature-title">Adaptable</h4>
+          <h5 class="feature-description">Adapts to any tremor level.</h5>
         </div>
         
         <div class="feature lightweight">
-          <div class="lightweight-graphic"></div>
-          <h3>Lightweight</h3>
-          <h6>Wear it all day long, every day.</h6>
+          <div class="feature-image-wrapper">
+            <img src="images/feather.png" alt="" class="lightweight-graphic">
+          </div>
+          <!-- <div class="lightweight-graphic"></div> -->
+          <h4 class="feature-title">Lightweight</h4>
+          <h5 class="feature-description">Wear it all day long, every day.</h5>
         </div>
 
       </div>
@@ -101,10 +147,10 @@
     <section class="survey">
       <div class="container">
 
-      <h2>Are you a patient with essential tremor?
+      <h3>Are you a patient with essential tremor?
         <br>
         Get involved with the development of the Steadiglove
-      </h2>
+      </h3>
       <button class="survey-button">Give Us Your Feedback</button>
       <h5>Your feedback will help us refine our prototype, and get the Steadiglove onto your hands faster</h5>
       
@@ -122,10 +168,10 @@
         </div>
 
         <div class="legal">
-          <h6>Terms of Use</h6>
-          <h6>Privacy Policy</h6>
-          <h6>© Steadiwear <script type="text/javascript">var cur = 2015; var year = new Date(); if(cur == year.getFullYear()) year = year.getFullYear(); else year = cur + ' - ' + year.getFullYear(); document.write(year);</script>
-          </h6>
+          <h5>Terms of Use</h5>
+          <h5>Privacy Policy</h5>
+          <h5>© Steadiwear <script type="text/javascript">var cur = 2015; var year = new Date(); if(cur == year.getFullYear()) year = year.getFullYear(); else year = cur + ' - ' + year.getFullYear(); document.write(year);</script>
+          </h5>
         </div>
       </div>
     </footer>
