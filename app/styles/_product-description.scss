@@ -10,13 +10,14 @@ section.product-description {
 .feature {
 	padding: 1.25rem .25rem;
 
-	@include span-columns(12);
+	@include span-columns(6);
+		@include omega(2n);
 
 	@include media($medium-screen-up) {
 
 		padding: .75rem .25rem;
 
-		@include span-columns(4);
+		@include span-columns(6);
 		@include omega(2n);
 	}
 

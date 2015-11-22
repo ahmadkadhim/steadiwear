@@ -1,19 +1,23 @@
 
 
 section.hero {
-	background: url('../images/thumbs-up-hand.jpg') 50% 50% no-repeat;
+	background: url('../images/thumbs-up-hand.jpg') 55% 50% no-repeat;
 	background-size: cover;
+
+	padding: 2rem 1.5rem;
 
 	@include media($medium-screen-up) {
 		background: url('../images/thumbs-up-hand.jpg') 40% 60% no-repeat;
 		background-size: cover;
+
+		padding: 5rem 3rem;
 	}
 
 	@include media($large-screen-up) {
 		background: url('../images/thumbs-up-hand.jpg') 20% 70% no-repeat;
 		background-size: cover;
 
-		padding: 5rem 3rem;
+		padding: 7rem 3rem;
 	}
 
 }
@@ -27,10 +31,10 @@ h1 {
 	@include span-columns(7.25);
 
 	@include media($medium-screen-up) {
-		@include span-columns(4.5); // of 8
+		@include span-columns(7);
 	}
 	@include media($large-screen-up) {
-		@include span-columns(6); // of 12
+		@include span-columns(6);
 	}
 
 
@@ -56,6 +60,7 @@ h1 {
 			margin-left: -1rem;
 			@include span-columns(5);
 			@include omega();
+			padding: .75em .25em;
 		}
 	}
 }
