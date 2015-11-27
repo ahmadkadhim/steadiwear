@@ -90,7 +90,7 @@ var FAVICON_DATA_FILE = 'faviconData.json';
 // package (see the check-for-favicon-update task below).
 gulp.task('generate-favicon', function(done) {
   realFavicon.generateFavicon({
-    masterPicture: 'app/images/steadiware-favicon.png',
+    masterPicture: 'app/images/steadiwear-favicon.png',
     dest: 'dist/images',
     iconsPath: '/',
     design: {
@@ -107,7 +107,7 @@ gulp.task('generate-favicon', function(done) {
         pictureAspect: 'shadow',
         themeColor: '#ffffff',
         manifest: {
-          name: 'Steadiware',
+          name: 'Steadiwear',
           display: 'browser',
           orientation: 'notSet',
           onConflict: 'override'
