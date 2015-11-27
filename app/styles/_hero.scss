@@ -49,14 +49,14 @@ h1 {
 	.sign-up-form {
 
 
-		input, button {
+		input, button, div  {
 			display: inline;
 		}
-		input {
+		input[type="email"] {
 			@include span-columns(7);
 			padding: .6em;
 		}
-		button {
+		input[type="submit"] {
 			margin-left: -1rem;
 			@include span-columns(5);
 			@include omega();

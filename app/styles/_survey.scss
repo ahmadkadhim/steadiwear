@@ -5,7 +5,7 @@ section.survey {
 		text-align: center;
 	}
 
-	button {
+	.survey-button {
 		font-size: $base-font-size * 1.999; // from type scale, matches an h3
 		padding: 1rem 1.5rem;
 		margin-bottom: 2rem;

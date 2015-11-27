@@ -1,0 +1,17 @@
+.legal-page {
+
+	padding: 4rem;
+
+	ul, ol {
+		list-style-type: lower-roman;
+	}
+
+	ol > ol, ul > ul, ol > ul, ul > ol {
+		margin-left: 1em;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 2.25rem;
+		margin-bottom: .5rem;
+	}
+}
