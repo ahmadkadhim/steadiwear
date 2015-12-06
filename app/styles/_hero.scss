@@ -4,39 +4,94 @@ section.hero {
 	background: url('../images/thumbs-up-hand.jpg') 55% 50% no-repeat;
 	background-size: cover;
 
-	padding: 2rem 1.5rem;
+	padding: 2rem 1.5rem 5.75rem;
 
 	@include media($medium-screen-up) {
 		background: url('../images/thumbs-up-hand.jpg') 40% 60% no-repeat;
 		background-size: cover;
 
-		padding: 5rem 3rem;
+		padding: 4rem 3rem;
 	}
 
 	@include media($large-screen-up) {
 		background: url('../images/thumbs-up-hand.jpg') 20% 70% no-repeat;
 		background-size: cover;
 
-		padding: 7rem 3rem;
+		padding: 6rem 3rem;
+	}
+
+	hr {
+		display: none;
+
+		@include media($medium-screen-up) {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 }
 
-h1 {
-	margin-bottom: 1rem;
-	line-height: 1;
-}
-
-.cta {
-	@include span-columns(7.25);
+.hero-copy {
+	@include span-columns(12);
 
 	@include media($medium-screen-up) {
-		@include span-columns(7);
+		text-align: center;
+		@include span-columns(5.5);
+		@include shift(.5);
+	}
+}
+
+.title {
+
+	@include span-columns(12);
+	text-align: center;
+
+	@include media($medium-screen-up) {
+		@include span-columns(12);
+		// @include shift(.5);
 	}
 	@include media($large-screen-up) {
-		@include span-columns(6);
+		// @include span-columns(4.75);
+		// @include shift(1);
 	}
 
+	h2 {
+		margin: 0;
+		text-shadow: $header-white-text-shadow;
+	}
+
+	h1 {
+		margin: 0;
+		line-height: 1;
+		text-shadow: $mobile-header-text-shadow;
+
+		@include media($medium-screen-up) {
+			text-shadow: $header-text-shadow;
+		}
+	}
+}
+
+
+.cta {
+
+	@include span-columns(6.75);
+	margin-top: 1.75rem;
+
+	@include media($medium-screen-up) {
+		text-align: center;
+		margin-top: 0;
+		@include span-columns(12);
+		// @include shift(1);
+	}
+	@include media($large-screen-up) {
+		@include span-columns(10);
+		@include shift(1);
+	}
+
+	h4 {
+		margin: .5em 0;
+	}
 
 	.mailing-list {
 		margin-top: 1.5rem;
@@ -55,12 +110,31 @@ h1 {
 		input[type="email"] {
 			@include span-columns(7);
 			padding: .6em;
+
+			@include media($medium-screen-up) {
+				width: 87%;
+				margin: 0 auto .5rem;
+			    text-align: center;
+			    float: none;
+
+				@include placeholder {
+					text-align: center;
+				}
+			}
 		}
 		input[type="submit"] {
 			margin-left: -1rem;
 			@include span-columns(5);
 			@include omega();
 			padding: .75em .25em;
+
+			@include media($medium-screen-up) {
+				float: none;
+				clear: both;
+				margin: 0 auto;
+				display: inline;
+				width: 86%;
+			}
 		}
 	}
 }

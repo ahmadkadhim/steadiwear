@@ -19,13 +19,15 @@ h6 {
 }
 
 h1 {
-  font-size: $base-font-size * 3.998;
+  font-size: $base-font-size * 4.498;
   font-weight: 600;
   color: $green-dark;
 }
 h2 {
-  font-size: $base-font-size * 2.827;
-  font-weight: 600;
+  font-size: $base-font-size * 2.127;
+  font-weight: 200;
+  font-style: italic;
+  color: $gray-medium;
 }
 h3 {
   font-size: $base-font-size * 1.999;
@@ -61,11 +63,10 @@ a {
 }
 
 hr {
-  border-bottom: $base-border;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: $base-spacing 0;
+  margin: $base-spacing/2 0;
+  width: 3rem;
+  border: 3px solid #fff;
+  box-shadow: $hr-box-shadow;
 }
 
 img,
@@ -76,4 +77,12 @@ picture {
 
 strong {
   font-weight: 600;
+}
+
+.letter-spacing-increase {
+  letter-spacing: .02em;
+}
+
+.letter-spacing-increase-2x {
+  letter-spacing: .06em;
 }

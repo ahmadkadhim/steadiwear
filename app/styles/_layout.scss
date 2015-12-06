@@ -37,13 +37,13 @@ body.smaller-size {
 @include media($mobile-only) {
 
 	h1 {
-	  font-size: $base-font-size * 2.441;
+	  font-size: $base-font-size * 2.9;
 	  font-weight: 600;
 	  color: $green-dark;
 	}
 	h2 {
-	  font-size: $base-font-size * 1.953;
-	  font-weight: 600;
+	  font-size: $base-font-size * 1.563;
+	  // font-weight: 600;
 	}
 	h3 {
 	  font-size: $base-font-size * 1.563;
