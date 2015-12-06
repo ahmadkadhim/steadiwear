@@ -4,7 +4,7 @@ section.hero {
 	background: url('../images/thumbs-up-hand.jpg') 55% 50% no-repeat;
 	background-size: cover;
 
-	padding: 2rem 1.5rem 5.75rem;
+	padding: 3rem 1.5rem 7.5rem;
 
 	@include media($medium-screen-up) {
 		background: url('../images/thumbs-up-hand.jpg') 40% 60% no-repeat;
@@ -58,7 +58,12 @@ section.hero {
 
 	h2 {
 		margin: 0;
+		margin-bottom: .25rem;
 		text-shadow: $header-white-text-shadow;
+
+		@include media($medium-screen-up) {
+			margin: 0;
+		}
 	}
 
 	h1 {
@@ -75,8 +80,8 @@ section.hero {
 
 .cta {
 
-	@include span-columns(6.75);
-	margin-top: 1.75rem;
+	@include span-columns(7);
+	margin-top: 2.75rem;
 
 	@include media($medium-screen-up) {
 		text-align: center;
