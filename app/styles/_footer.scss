@@ -4,7 +4,7 @@ footer {
 	background: $gray-dark;
 
 	a {
-		color: $gray-medium-dark;
+		color: $gray-medium-light;
 		// text-decoration: underline;
 
 		&:hover {
@@ -24,7 +24,7 @@ footer {
 }
 
 .legal > * {
-	color: $gray-medium-dark;
+	color: $gray-medium-light;
 	display: inline-block;
 	margin: .33rem;
 }

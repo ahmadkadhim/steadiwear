@@ -1,0 +1,58 @@
+
+
+.sprinkler-hand {
+	background: url('../images/sprinkler-hand.jpg') 60% 50% no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	box-shadow: inset 0 0 22px rgba(0,0,0,.85);
+
+	height: 20em;
+}
+
+section.story {
+
+	background: $gray-extra-light;
+
+	* {
+		color: $gray-medium;
+	}
+
+	article {
+		// background: $white;
+		padding: 1em;
+		text-align: justify;
+		// max-width: 40em;
+		// margin: 0 auto;
+		// border-radius: $base-border-radius;
+		// box-shadow: $box-shadow;
+
+		@include span-columns(11);
+		@include shift(.5);
+
+		@include media($medium-screen-up) {
+			// padding: 2em;
+
+			@include span-columns(10);
+			@include shift(1);
+		}
+		@include media($large-screen-up) {
+			// padding: 4em;
+
+			@include span-columns(8);
+			@include shift(2);
+		}
+
+	}
+
+	h2 {
+		font-style: normal;
+		font-weight: 300;
+
+		text-align: center;
+	}
+
+	p {
+		font-size: 1.414em;
+	}
+}

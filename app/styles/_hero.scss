@@ -59,7 +59,7 @@ section.hero {
 	h2 {
 		margin: 0;
 		margin-bottom: .25rem;
-		text-shadow: $header-white-text-shadow;
+		// text-shadow: $header-white-text-shadow;
 
 		@include media($medium-screen-up) {
 			margin: 0;

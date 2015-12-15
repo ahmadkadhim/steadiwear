@@ -18,8 +18,8 @@ $base-z-index: 0;
 // Colors
 $black: #04040F;
 $gray-dark: #2D3A3A;
-$gray-medium-dark: #999E99;
 $gray-medium: #666666;
+$gray-medium-light: #999E99;
 $gray-light: #DDDDDD;
 $gray-extra-light: #F4F4F4;
 $white: #FCFCFF;
@@ -48,6 +48,7 @@ $base-timing: ease;
 
 // Shadows
 $box-shadow: .25px .5px 3px rgba(0,0,0,.12);
+$heavy-box-shadow: 1px 1.5px 3px rgba(0,0,0,.36);
 $hr-box-shadow: .25px .5px .80px rgba(0,0,0,.12);
 $button-box-shadow: .5px 1.5px .25px rgba(0,0,0,.24);
 
