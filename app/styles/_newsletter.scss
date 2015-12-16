@@ -1,0 +1,92 @@
+
+
+
+
+
+section.newsletter {
+	background: url('../images/clay-hands.jpg') 50% 60% no-repeat;
+	background-size: cover;
+	position: relative;
+	margin: -5px;
+
+	&:before {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(255,255,255,.78);
+	}
+
+	@include media($medium-screen-up) {
+		margin: 35px;
+
+		&:before {
+			background: rgba(255,255,255,.1);
+		}
+	}
+}
+
+.newsletter-signup-form {
+
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	padding: 6rem 4rem;
+	border-radius: $base-border-radius/2;
+	text-shadow: $light-text-shadow;
+
+	@include span-columns(12);
+	// @include shift(1);
+
+	@include media($medium-screen-up) {
+		background: rgba(255,255,255,.72);
+		margin: 8rem 0 6rem;
+		@include span-columns(10);
+		@include shift(1);
+
+
+	}
+	@include media($large-screen-up) {
+		padding: 6rem 2.75rem;
+		@include span-columns(7);
+		@include shift(2.5);
+
+
+	}
+
+	.sign-up-form {
+
+		input, button, div  {
+			display: block;
+		}
+		input[type="email"] {
+			padding: .6em;
+			width: 100%;
+
+
+			@include placeholder {
+				text-align: center;
+			}
+
+			@include media($medium-screen-up) {
+				width: 67%;
+			}
+
+		}
+		input[type="submit"] {
+			padding: .75em .25em;
+			margin: 0;
+			width: 100%;
+
+			@include media($medium-screen-up) {
+				float: none;
+				clear: both;
+				margin: 0 auto;
+				display: inline;
+				width: 67%;
+			}
+		}
+	}
+}
