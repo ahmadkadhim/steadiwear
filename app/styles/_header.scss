@@ -68,26 +68,36 @@ header {
 
 nav {
 
-	display: block;
-
-	a {
-		color: $gray-medium;
-		transition: all .25s ease-in-out;
-
-		&:hover {
-			color: $green-light;
-			border-bottom: 2px solid $green-light;
-		}
-
-
+	@include media($mobile-only) {
+		display: block;
+		text-align: center;
+		background: $gray-light;
 	}
 
 	@include media($medium-screen) {
 		display: inline;
 		float: right;
 		margin-right: 2em;
-	    margin-top: 32px; // to baseline align it with the Steadiwear text in the logo		
+	    margin-top: 20px; // to baseline align it with the Steadiwear text in the logo		
 	}
+
+	.nav-item {
+		margin-bottom: 0;
+		padding: .55em;
+	}
+
+	a {
+		color: $gray-medium;
+		transition: all .25s ease-in-out;
+
+		&:hover {
+			color: $green-dark;
+			border-bottom: 2px solid $green-dark;
+		}
+
+
+	}
+
 
 }
 

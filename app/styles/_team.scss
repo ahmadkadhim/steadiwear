@@ -30,14 +30,23 @@
 	@include outer-container;
 
 	li {
-		@include span-columns(4);
-		@include omega(3n);
+		@include span-columns(12);
 
 		background: white;
 		padding: 1em;
 		margin-bottom: 2em;
 		box-shadow: 2px 2px 0px 2px rgba(0,0,0,.12);
 		min-height: 8em;
+
+		@include media($medium-screen) {
+			@include span-columns(6);
+			@include omega(2n);
+		}
+		@include media($large-screen) {
+			@include omega-reset(2n);
+			@include span-columns(4);
+			@include omega(3n);
+		}
 	}
 
 	.name {
