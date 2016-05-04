@@ -33,11 +33,12 @@
           console.log(size);
           if (size === "normal-size") {
             document.body.classList.remove('normal-size');
-            console.log(document.body.getAttribute('class'));
             document.body.classList.add('larger-size');
+            document.getElementById("text-size-increase").disabled = true;
           } else if (size === "smaller-size") {
             document.body.classList.remove('smaller-size');
-            document.body.classList.add('normal-size');            
+            document.body.classList.add('normal-size');
+            document.getElementById("text-size-decrease").disabled = false;           
           }
         }
   
@@ -47,9 +48,11 @@
           if (size === "larger-size") {
             document.body.classList.remove('larger-size');
             document.body.classList.add('normal-size');
+            document.getElementById("text-size-increase").disabled = false;
           } else if (size === "normal-size") {
             document.body.classList.remove('normal-size');
-            document.body.classList.add('smaller-size');            
+            document.body.classList.add('smaller-size');
+            document.getElementById("text-size-decrease").disabled = true;             
           }
         }
       </script>
@@ -57,12 +60,12 @@
       <div class="text-size-bar">
         <div class="container">
           <div class="text-size-control">
-            <h5 class="text-size">Text Size</h5>
-            <button class="text-size-decrease" onclick="decreaseTextSize()">&ndash;</button>
+            <h4 class="text-size">Text Size</h5>
+            <button id="text-size-decrease" onclick="decreaseTextSize()">&ndash; &nbsp;Smaller</button>
 <!--             <div class="text-size-indicator smaller">A</div>
             <div class="text-size-indicator normal">A</div>
             <div class="text-size-indicator larger">A</div> -->
-            <button class="text-size-increase" onclick="increaseTextSize()"><strong>+</strong></button>
+            <button id="text-size-increase" onclick="increaseTextSize()"><strong>+ &nbsp;Larger</strong></button>
           </div>
         </div>
       </div>
@@ -70,9 +73,16 @@
 
       <div class="logo-bar">
         <div class="container">
-          <img src="images/steadiwear-logo.png" alt="Steadiwear Logo" class="logo">
+
+          <a href="/"><img src="images/steadiwear-logo.png" alt="Steadiwear Logo" class="logo"></a>
+          
+          <nav>
+            <h4><a href="/team.html">Team</a></h4>
+          </nav>
+
         </div>
       </div>
+
 
     </header>
 
@@ -86,8 +96,16 @@
         <div class="address">
           <h3>Steadiwear Inc.</h3>
           <h4>112 College St, Room 411</h4>
-          <h4>Toronto, Ontario</h4>
-          <h4>M5G 1L6</h4>
+          <h4>Toronto, Ontario M5G 1L6</h4>
+        </div>
+
+        <div class="email">
+          <h4>info@steadiwear.com</h4>
+        </div>
+
+        <div class="logos">
+          <img class="impact-logo" src="images/impact.jpg" alt="Impact Centre at U of T Logo">
+          <img class="oce-logo" src="images/oce-logo.jpg" alt="Ontario Centres of Excellence Logo">
         </div>
 
         <div class="legal">

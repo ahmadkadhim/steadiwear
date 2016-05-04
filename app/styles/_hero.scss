@@ -1,26 +1,26 @@
 
 
 section.hero {
-	background: url('../images/thumbs-up-hand.jpg') 55% 50% no-repeat;
+	background: url('../images/mobile-hero.jpg') 55% 50% no-repeat;
 	background-size: cover;
 
-	padding: 3rem 1.5rem 7.5rem;
+	padding: 3rem 1.5rem 3rem;
 
 	@include media($medium-screen-up) {
-		background: url('../images/thumbs-up-hand.jpg') 40% 60% no-repeat;
+		background: url('../images/hero.jpg') 40% 60% no-repeat;
 		background-size: cover;
 
 		padding: 4rem 3rem;
 	}
 
 	@include media($large-screen-up) {
-		background: url('../images/thumbs-up-hand.jpg') 20% 70% no-repeat;
+		background: url('../images/hero.jpg') 20% 40% no-repeat;
 		background-size: cover;
 
 		padding: 6rem 3rem;
 	}
 
-	hr {
+	.title {
 		display: none;
 
 		@include media($medium-screen-up) {
@@ -30,13 +30,23 @@ section.hero {
 		}
 	}
 
+	.mobile-title {
+		@include media($medium-screen-up) {
+			display: none;
+		}
+	}
+
+	h4 {
+		color: $white;
+	}
+
 }
 
 .hero-copy {
 	@include span-columns(12);
 
 	@include media($medium-screen-up) {
-		text-align: center;
+		// text-align: left;
 		@include span-columns(5.5);
 		@include shift(.5);
 	}
@@ -45,7 +55,7 @@ section.hero {
 .title {
 
 	@include span-columns(12);
-	text-align: center;
+	// text-align: center;
 
 	@include media($medium-screen-up) {
 		@include span-columns(12);
@@ -70,28 +80,41 @@ section.hero {
 		margin: 0;
 		line-height: 1;
 		text-shadow: $mobile-header-text-shadow;
+		text-align: center;
 
 		@include media($medium-screen-up) {
 			text-shadow: $header-text-shadow;
+			text-align: left;
 		}
+	}
+}
+
+.mobile-title {
+
+	h1 {
+		text-align: center;
+		margin-bottom: 0;
+		text-shadow: $light-text-shadow;
 	}
 }
 
 
 .cta {
 
-	@include span-columns(7);
-	margin-top: 2.75rem;
+	// @include span-columns(7);
+	text-align: center;
+	text-shadow: $light-text-shadow;
 
 	@include media($medium-screen-up) {
-		text-align: center;
+		margin-top: 2.75rem;
+		text-align: left;
 		margin-top: 0;
 		@include span-columns(12);
 		// @include shift(1);
 	}
 	@include media($large-screen-up) {
 		@include span-columns(10);
-		@include shift(1);
+		// @include shift(1);
 	}
 
 	h4 {
@@ -114,12 +137,14 @@ section.hero {
 		display: inline;
 	}
 	input[type="email"] {
-		@include span-columns(7);
+		// @include span-columns(7);
 		padding: .6em;
+		width: 100%;
+		margin: 0 auto .5rem;
 
 		@include media($medium-screen-up) {
-			width: 87%;
-			margin: 0 auto .5rem;
+			width: 97%;
+			margin: 0 0 .5rem;
 		    text-align: center;
 		    float: none;
 
@@ -129,17 +154,19 @@ section.hero {
 		}
 	}
 	input[type="submit"] {
-		margin-left: -1rem;
-		@include span-columns(5);
-		@include omega();
+		// margin-left: -1rem;
+		// @include span-columns(5);
+		// @include omega();
 		padding: .75em .25em;
+		width: 100%;
+		margin: 0 auto;
 
 		@include media($medium-screen-up) {
 			float: none;
 			clear: both;
 			margin: 0 auto;
 			display: inline;
-			width: 87%;
+			width: 97%;
 		}
 	}
 }

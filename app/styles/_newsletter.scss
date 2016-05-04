@@ -4,7 +4,7 @@
 
 
 section.newsletter {
-	background: url('../images/clay-hands.jpg') 50% 68% no-repeat;
+	background: url('../images/clay-hands.jpg') 50% 54% no-repeat;
 	background-size: cover;
 	position: relative;
 	// margin: -5px;
@@ -56,7 +56,7 @@ section.newsletter {
 
 
 	h4 {
-		text-shadow: $light-text-shadow;
+		// text-shadow: $light-text-shadow;
 	}
 
 	.sign-up-form {
@@ -76,7 +76,7 @@ section.newsletter {
 
 			@include media($medium-screen-up) {
 				width: 82%;
-				margin-top: 2rem;
+				margin: 2rem auto .5rem;
 			}
 
 		}

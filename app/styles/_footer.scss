@@ -13,12 +13,29 @@ footer {
 	}
 }
 
-.address, .legal {
+.logos {
+
+	margin-bottom: 3em;
+	text-align: center;
+
+	.oce-logo {
+		width: 183px;
+	}
+
+	img {
+		// width: 50%;
+		width: 150px;
+		margin: 2em 0 1em;
+		// display: inline-block;
+	}
+}
+
+.address, .email, .legal {
 	text-align: center;
 	margin: 1rem;
 }
 
-.address > * {
+.address > *, .email > * {
 	color: $white;
 	margin-bottom: .25rem;
 }

@@ -7,6 +7,7 @@ header {
 .text-size-bar {
 	background: $gray-extra-light;
 	@include clearfix;
+	padding: .10em 0;
 }
 
 .text-size-control {
@@ -18,7 +19,7 @@ header {
 	}
 }
 
-.text-size, .text-size-increase, .text-size-decrease {
+.text-size, #text-size-increase, #text-size-decrease {
 	vertical-align: center;
 }
 
@@ -27,11 +28,17 @@ header {
 	margin-right: 1rem;
 }
 
-.text-size-increase, .text-size-decrease {
+#text-size-increase, #text-size-decrease {
 	background-color: $white;
-	padding: .25rem .5rem;
+	padding: .5rem .75rem;
 	color: $black;
 	box-shadow: $box-shadow;
+	margin-top: -7px;
+
+	&:hover {
+		background-color: $green-light;
+		color: $white;
+	}
 }
 
 .logo-bar {
@@ -40,18 +47,57 @@ header {
 
 .logo {
 	width: 180px;
-	display: block;
-	margin: 1rem auto;
-
-	// adjustment for visual off-centeredness of logo (because of wave followed by text)
-	position: relative;
-	left: -1rem;
+	display: inline-block;
+    position: relative;
+    left: 50%;
+	margin: 1rem 0;
+    margin-left: -90px;
 
 	@include media($medium-screen) {
 		width: 240px;
+		left: 0%;
+		margin-left: 1.5em;
 	}
 
 	@include media($large-screen) {
-		width: 300px;
+		// width: 300px;
+		// margin-left: -150px;
 	}
 }
+
+
+nav {
+
+	display: block;
+
+	a {
+		color: $gray-medium;
+		transition: all .25s ease-in-out;
+
+		&:hover {
+			color: $green-light;
+			border-bottom: 2px solid $green-light;
+		}
+
+
+	}
+
+	@include media($medium-screen) {
+		display: inline;
+		float: right;
+		margin-right: 2em;
+	    margin-top: 32px; // to baseline align it with the Steadiwear text in the logo		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
