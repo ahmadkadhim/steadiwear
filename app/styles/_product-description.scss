@@ -1,5 +1,83 @@
 
+
+
+img.steadiglove {
+	width: 110%;
+	max-width: 110%;
+	margin-left: -4.5%;
+
+	@include media($medium-screen-up) {
+		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+	}
+}
+
 section.product-description {
+	padding-top: 0;
+
+	h2 {
+		color: $gray-dark;
+		font-style: normal;
+		line-height: 1.2;
+	}
+
+	h3 {
+		font-weight: 600;
+	}
+
+	aside {
+		padding-bottom: 1em;
+	}
+
+	article {
+		@include span-columns(12);
+		text-align: center;
+
+		@include media($medium-screen-up) {
+			@include span-columns(12);
+			// @include shift(1);
+
+			padding: .75rem .25rem;
+
+			h2 {
+				text-align: center;
+				padding-bottom: 1em;
+			}
+
+			aside {
+				@include span-columns(5 of 12);
+				// @include shift(1);
+				text-align: left;
+				padding-bottom: 0;
+			}
+
+		}
+
+		@include media($large-screen-up) {
+			@include span-columns(10);
+			@include shift(1);
+
+			aside {
+				@include span-columns(5 of 10);
+				// @include shift(.5);
+				text-align: left;
+			}
+
+		}
+	}
+
+	aside {
+		// padding-bottom: 1em;
+	}
+
+}
+
+
+
+
+
+section.product-feature-icons {
 	background: $gray-extra-light;
 
 	* {
