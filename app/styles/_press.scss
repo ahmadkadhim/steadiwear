@@ -1,0 +1,43 @@
+.press {
+
+  * {
+    color: $gray-medium;
+  }
+
+  h2 {
+    font-style: normal;
+    font-weight: 300;
+
+    text-align: center;
+  }
+
+  li {
+      @include span-columns(6);
+      @include omega(2n);
+
+    @include media($medium-screen-up) {
+
+      padding: .75rem .25rem;
+
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include media($large-screen-up) {
+
+      padding: .50rem .25rem;
+
+      @include omega-reset(2n);
+      @include span-columns(3);
+      @include omega(4n);
+    }
+  }
+
+  img {
+    padding: 1em;
+    // width: 50%;
+    // width: 150px;
+    // margin: 2em 0 1em;
+    // display: inline-block;
+  }
+}

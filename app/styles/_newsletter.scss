@@ -20,7 +20,7 @@ section.newsletter {
 	}
 
 	@include media($medium-screen-up) {
-		margin: 35px;
+		// margin: 35px;
 
 		&:before {
 			background: rgba(255,255,255,.1);
