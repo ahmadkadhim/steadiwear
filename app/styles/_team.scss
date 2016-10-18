@@ -23,6 +23,10 @@
 	// }
 }
 
+.center-helper {
+	text-align: center;
+}
+
 .team-list, .advisors-list {
 
 	margin: 0 0 3em;
@@ -33,17 +37,16 @@
 		@include span-columns(12);
 
 		background: white;
-		padding: 1em;
+		// padding: 1em;
 		margin-bottom: 2em;
-		box-shadow: 2px 2px 0px 2px rgba(0,0,0,.12);
-		min-height: 8em;
+		box-shadow: 1px 2px 3px 1px rgba(0,0,0,.12);
 
 		@include media($medium-screen) {
-			@include span-columns(6);
-			@include omega(2n);
+			// @include span-columns(6);
+			// @include omega(2n);
 		}
 		@include media($large-screen) {
-			@include omega-reset(2n);
+			// @include omega-reset(2n);
 			@include span-columns(4);
 			@include omega(3n);
 		}
@@ -62,4 +65,25 @@
 		margin-bottom: 0;
 	}
 
+}
+
+.team-list li {
+	height: 28em;
+}
+.advisors-list li {
+	height: 14rem;
+}
+
+
+
+.team-image {
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 18rem;
+}
+
+.team-card-content {
+	padding: 1rem;
 }
